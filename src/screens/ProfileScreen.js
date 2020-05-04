@@ -6,6 +6,7 @@ import {
   StatusBar,
   Dimensions,
   Image,
+  ScrollView,
 } from 'react-native';
 import Colors from '../constants/Colors';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -50,7 +51,7 @@ export default function SearchScreen() {
         hidden={false}
         translucent={true}
       />
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         {/**view header */}
         <View style={styles.header}>
           <View style={styles.viewNotification}>
@@ -131,7 +132,7 @@ export default function SearchScreen() {
           {RenderItem('message', 'Message', '')}
           {RenderItem('qAndF', 'Q&F', 'V4.0.2')}
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 }
@@ -238,6 +239,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     borderTopWidth: 1,
     borderTopColor: Colors.grey,
+    marginBottom: w / 25,
   },
   feature: {
     marginHorizontal: w / 16.667,
